@@ -34,7 +34,7 @@ There are 3 build scripts,
 *  [``run-build-monitoring.sh``](run-build-monitoring.sh)
 *  [``run-build-backup.sh``](run-build-backup.sh)
 
-each of which invoke their associated ``~/mms-<type>/build/build-all.sh``
+each of which invoke their associated ``~/mms-<agent-type>/build/build-all.sh``
 scripts.
 
 Run these to build the agents. ``.tar.gz`` archives will be placed in
