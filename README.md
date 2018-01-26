@@ -4,25 +4,43 @@ mms-s390x-builder
 This repository contains scripts and sample config to support 
 building the MongoDB Ops Manager agents on the IBM zSeries platform.
 
-Currently the agents built for the `s390x` golang platform 
+Currently the agents may be built for the ``s390x`` 
+golang platform on three specific operating systems. They 
 have been tested aginst MongoDB Ops Manager 3.6.2 
-(running on Amazon Linux) for:
-* Red Hat Enterprise Linux 7.4
-* SUSE 
-* Ubuntu 16.04
-
-Pre-built archives with Operating Systemn specific builds can be found
+(running on Amazon Linux). Pre-built archives with 
+OS-specific builds can be found
 through the following links:
 
 * [Ubuntu 16.04](https://s3.console.aws.amazon.com/s3/buckets/mms-agents-s390x/ubuntu/)
 * [SUSE 12.3](https://s3.console.aws.amazon.com/s3/buckets/mms-agents-s390x/suse/)
-* [Red Hat 7.4](https://s3.console.aws.amazon.com/s3/buckets/mms-agents-s390x/redhat/)
+* [Red Hat Enterprise Linux 7.4](https://s3.console.aws.amazon.com/s3/buckets/mms-agents-s390x/redhat/)
+
+Building Ops Manager Agents for ``s390x``
+-----------------------------------------
 
 In order to compile the agents yourself, clone the following forks
 of the main agent repos:
 * [mms-automation](https://github.com/jasonmimick/mms-automation)
 * [mms-monitoring](https://github.com/jasonmimick/mms-monitoring)
 * [mms-backup](https://github.com/jasonmimick/mms-backup)
+
+[``build-build-env.sh``](build-build-env.sh) is a schell script to install
+dependencies. Please note this script has not been maintained to 'just work'
+across the various operating systems. Certain commands have been commented
+out and the script should be reviewed prior to usage.
+
+There are 3 build scripts, 
+*  [``run-build-automation.sh``](run-build-automation.sh)
+*  [``run-build-monitoring.sh``](run-build-monitoring.sh)
+*  [``run-build-backup.sh``](run-build-backup.sh)
+
+each of which invoke their associated ``~/mms-<type>/build/build-all.sh``
+scripts.
+
+Run these to build the agents. ``.tar.gz`` archives will be placed in
+``~/mms-<agent-type>/build/build``.
+
+The [upload-builds.sh](upload-builds.sh) script uploads to `s3://mms-agents-s390x`
 
 Limitations
 -----------
@@ -62,5 +80,5 @@ officially supported software. They should _never_ be used within any
 production setting. MongoDB assumes no responsibility or liability for 
 it's use.
  
-
+&copy; MongoDB, Inc 2018
 
