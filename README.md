@@ -4,9 +4,6 @@ mms-s390x-builder
 This repository contains scripts and sample config to support 
 building the MongoDB Ops Manager agents on the IBM zSeries platform.
 
-Pre-built archives with Operating Systemn specific builds are found in the
-[build] folder.
-
 Currently the agents built for the `s390x` golang platform 
 have been tested aginst MongoDB Ops Manager 3.6.2 
 (running on Amazon Linux) for:
@@ -14,11 +11,18 @@ have been tested aginst MongoDB Ops Manager 3.6.2
 * SUSE 
 * Ubuntu 16.04
 
+Pre-built archives with Operating Systemn specific builds can be found
+through the following links:
+
+* [Ubuntu 16.04](https://s3.console.aws.amazon.com/s3/buckets/mms-agents-s390x/ubuntu/)
+* [SUSE 12.3](https://s3.console.aws.amazon.com/s3/buckets/mms-agents-s390x/suse/)
+* [Red Hat 7.4](https://s3.console.aws.amazon.com/s3/buckets/mms-agents-s390x/redhat/)
+
 In order to compile the agents yourself, clone the following forks
 of the main agent repos:
-* https://github.com/jasonmimick/mms-monitoring
-* https://github.com/jasonmimick/mms-automation
-* https://github.com/jasonmimick/mms-backup
+* [mms-automation](https://github.com/jasonmimick/mms-automation)
+* [mms-monitoring](https://github.com/jasonmimick/mms-monitoring)
+* [mms-backup](https://github.com/jasonmimick/mms-backup)
 
 Limitations
 -----------
@@ -37,9 +41,10 @@ Testing and Demo System
 -----------------------
 
 A demonstration system has been deployed and may be access at
+
 http://ec2-34-203-218-44.compute-1.amazonaws.com:8080.
 
-You may [Register|http://ec2-34-203-218-44.compute-1.amazonaws.com:8080/user#/ops/register/accountProfile] for new account for access.
+You may [Register](http://ec2-34-203-218-44.compute-1.amazonaws.com:8080/user#/ops/register/accountProfile) for new account for access.
 
 Contact
 -------

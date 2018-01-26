@@ -43,6 +43,10 @@ sodo ${PKG_MGR} libsasl2-dev
 curl -OL http://mirror.jax.hugeserver.com/apache/ant/binaries/apache-ant-1.10.1-bin.tar.gz
 tar xf apache-ant-1.10.1-bin.tar.gz
 
+sudo apt-get install s3cmd
+#sudo yum install s3cmd
+#zypper addrepo http://s3tools.org/repo/SLE_11/s3tools.repo
+#zypper install s3cmd
 
 REPO_HOME=https://github.com/jasonmimick
 git clone ${REPO_HOME}/mms-automation
