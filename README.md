@@ -60,7 +60,7 @@ Testing and Demo System
 
 A demonstration system has been deployed and may be access at
 
-<a href="http://ec2-34-203-218-44.compute-1.amazonaws.com:8080" target="_blank">http://ec2-34-203-218-44.compute-1.amazonaws.com:8080</a>.
+(http://ec2-34-203-218-44.compute-1.amazonaws.com:8080)[http://ec2-34-203-218-44.compute-1.amazonaws.com:8080]{:target="_blank"}
 
 You may [Register](http://ec2-34-203-218-44.compute-1.amazonaws.com:8080/user#/ops/register/accountProfile) for new account for access.
 
